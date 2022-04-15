@@ -29,14 +29,23 @@ const PICTURES_DATA = [
     },
 ];
 
+function Picture(props) {
+    const {picture} = props;
+    return (
+        <div>
+            <img src={`images/${picture.name}`}
+                 alt={picture.name}
+                 width="100%"
+                 style={{margin: "2vw auto 0 auto"}}/>
+            <a href={picture.href}>{picture.by}</a>
+        </div>
+    );
+}
+
 export function PicturesPage() {
     return (
         <div style={{margin: "0 2vw"}}>
-            <h1>Pictures</h1>
-            <img src={`images/aziz-acharki-U3C79SeHa7k-unsplash.jpg`}
-                 alt={"aziz-acharki-U3C79SeHa7k-unsplash.jpg"}
-                 width="100%"
-                 style={{margin: "2vw auto 0 auto"}}/>
+            {PICTURES_DATA.map(p => <Picture key={p.id} picture={p}/>)}
         </div>
     );
 }
