@@ -6,7 +6,7 @@ export function CarsPage(props) {
     return (
         <div className="mx-3" >
             <Cars cars={cars} title="Auto's"/>
-            <Cars cars={cars.filter(car => car.status !== "sold")} title="Auto's die nog niet verkocht zijn"/>
+            <Cars cars={cars.filter(car => car.status !== "sold")} title="Auto's TE KOOP"/>
         </div>
     );
 }
