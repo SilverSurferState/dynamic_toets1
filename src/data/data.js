@@ -30,6 +30,7 @@ export const CAR_DATA = [
         brand: "peugeot",
         type: "204",
         color: "blauw",
+        status: "new arrival"
     },
     {
         id: 2,
@@ -37,15 +38,18 @@ export const CAR_DATA = [
         brand: "fiat",
         type: "punto",
         color: "geel",
-        note: "die ging altijd kapot"
+        note: "die ging altijd kapot",
+        status: "sold"
     },
-    {id: 3, name: "die van mijn pa", brand: "volvo", color: "zwart"},
-    {id: 4, name: "geitje", brand: "citroën",},
-    {id: 5, name: "auto1", brand: "Peugeot", type: "505", color: "grijs"},
+    {id: 3, name: "die van mijn pa", brand: "volvo", color: "zwart", status: "new arrival"},
+    {id: 4, name: "geitje", brand: "citroën", status: "delivered"},
+    {id: 5, name: "auto1", brand: "Peugeot", type: "505", color: "grijs", status: "sold"},
     {id: 6, name: "auto2", brand: "Fiat", type: "Panda"},
-    {id: 7, name: "auto3", brand: "Fiat", type: "Tipo", color: "groen"},
-    {id: 8, name: "auto4", brand: "Citroën", type: "C4", color: "rood"},
-    {id: 9, name: "auto5", brand: "Fiat", type: "Panda", color: "rood"}
+    {id: 7, name: "auto3", brand: "Fiat", type: "Tipo", color: "groen", status: "new arrival"},
+    {id: 8, name: "auto4", brand: "Citroën", type: "C4", color: "rood", status: "sold"},
+    {id: 9, name: "auto5", brand: "Fiat", type: "Panda", color: "rood", status: "delivered"},
+    {id: 10, name: "auto6", brand: "Volkswagen", color: "zwart"},
+    {id: 11, name: "auto7", brand: "Volvo", color: "rood"},
 ];
 
 export const PERSON_DATA = [

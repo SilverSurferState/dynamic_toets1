@@ -38,6 +38,7 @@ function Car(props) {
     return (
         <Col xs={12} sm={6} md={4} lg={3} xl={2}>
             <MyCard title={car.name}>
+                {car.status && <div className="fw-bold" style={{color: "red"}}>{car.status}</div>}
                 {car.brand && <div>merk: {car.brand}</div>}
                 {car.type && <div>type: {car.type}</div>}
                 {car.note && <div>opm: {car.note}</div>}
@@ -53,7 +54,8 @@ Car.propTypes = {
         brand: PropTypes.string,
         type: PropTypes.string,
         note: PropTypes.string,
-        color: PropTypes.string
+        color: PropTypes.string,
+        status: PropTypes.string
     })
 }
 
