@@ -12,6 +12,7 @@ export function CarsPage(props) {
             <Cars cars={cars.filter(car => car.status !== "sold")} title="Auto's TE KOOP"/>
             <Section title="Test Status"><Status status={status}></Status></Section>
             <Statuses statuses={statuses} title="Test Statuses"></Statuses>
+            <Statuses statuses={cars.map(car => ({description: car.status})).filter((status,index, self) => self.findIndex((s) => status.description === s.description) === index)} title="Statuses for cars"></Statuses>
         </div>
     );
 }
