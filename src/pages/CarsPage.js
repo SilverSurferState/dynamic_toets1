@@ -13,6 +13,7 @@ export function CarsPage(props) {
             <Section title="Test Status"><Status status={status}></Status></Section>
             <Statuses statuses={statuses} title="Test Statuses"></Statuses>
             <Statuses statuses={cars.map(car => ({description: car.status})).filter((status,index, self) => self.findIndex((s) => status.description === s.description) === index)} title="Statuses for cars"></Statuses>
+            <Statuses statuses={cars.map(car => ({description: car.status, amount: cars.reduce((status) => status.description === status,1)})).filter((status,index, self) => self.findIndex((s) => status.description === s.description) === index)} title="Statuses for cars with amounts"></Statuses>
         </div>
     );
 }
